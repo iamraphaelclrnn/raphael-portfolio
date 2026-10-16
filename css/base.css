@@ -1,0 +1,6 @@
+/* ==========================================================
+   BASE: page background for dark and light mode
+   ========================================================== */
+html,body{margin:0;padding:0;background:#101426}
+html[data-px-theme=light],html[data-px-theme=light] body{background:#F4EFE4}
+html{scroll-behavior:auto}

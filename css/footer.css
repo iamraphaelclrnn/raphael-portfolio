@@ -1,0 +1,41 @@
+/* ==========================================================
+   FOOTER: thanks for playing screen
+   ========================================================== */
+.pxf{--tx:#F4F0E8;--tx2:#d4d0e2;--tx3:#a9a6bf;--tgold:#FFDA78;--tcyan:#55E6E9;--pn:#181d38;--ln:#2e3566;--fbg:#0b0e1c;--navy:#101426;--navy2:#181d38;--purple:#7756D8;--purple-d:#5a3fb5;--cyan:#55E6E9;--green:#89F0A0;--gold:#FFDA78;--gold-d:#d9a93f;--cream:#F4F0E8;--coral:#FF7F91;
+  position:relative;z-index:2;overflow:hidden;background:var(--fbg);color:var(--tx);font-family:'Space Grotesk',system-ui,sans-serif;padding:clamp(70px,10vw,120px) clamp(16px,5vw,64px) 0;border-top:6px solid var(--purple)}
+.pxf *{box-sizing:border-box}
+.pxf::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(119,86,216,.08) 2px,transparent 2px),linear-gradient(90deg,rgba(119,86,216,.08) 2px,transparent 2px);background-size:48px 48px;pointer-events:none}
+.pxf-in{position:relative;max-width:1100px;margin:0 auto;text-align:center}
+.pxf-over{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--tcyan);margin-bottom:18px}
+.pxf h2{margin:0;font-family:'Press Start 2P',monospace;font-weight:400;font-size:clamp(20px,4.4vw,44px);line-height:1.4;color:var(--tgold);text-shadow:5px 5px 0 var(--purple-d)}
+.pxf h2 span{display:inline-block}
+.pxf.on h2 span{animation:pxfWave 1.4s steps(4) infinite;animation-delay:calc(var(--i) * .08s)}
+@keyframes pxfWave{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-8px)}}
+.pxf-lead{max-width:52ch;margin:22px auto 0;color:var(--tx2);font-size:17px;line-height:1.65}
+.pxf-card{display:inline-flex;flex-direction:column;gap:6px;margin-top:40px;padding:18px 24px;background:var(--pn);border:4px solid var(--ln);box-shadow:6px 6px 0 #000}
+.pxf-card strong{font-family:'Press Start 2P',monospace;font-weight:400;font-size:12px;line-height:1.6}
+.pxf-card small{font-size:15px;color:var(--tcyan)}
+.pxf a:focus-visible,.pxf button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.pxf-top{display:flex;margin:30px auto 0;align-items:center;gap:10px;font-family:'Press Start 2P',monospace;font-size:11px;color:var(--navy);background:var(--gold);border:0;padding:15px 18px;cursor:pointer;
+  box-shadow:inset -4px -4px 0 var(--gold-d),inset 4px 4px 0 rgba(255,255,255,.35),0 0 0 4px #05070f,6px 6px 0 4px #05070f;transition:transform .08s steps(1)}
+.pxf-top:hover{transform:translate(-2px,-2px)}
+.pxf-top:active{transform:translate(6px,6px);box-shadow:inset 4px 4px 0 var(--gold-d),0 0 0 4px #05070f}
+.pxf-top .blink{animation:pxfBlink 1s steps(1) infinite}
+@keyframes pxfBlink{50%{opacity:0}}
+.pxf-stage{position:relative;height:120px;margin-top:50px}
+.pxf-ground{position:absolute;left:-10vw;right:-10vw;bottom:0;height:34px;background:repeating-linear-gradient(90deg,#2b3a2b 0 16px,#334a33 16px 32px);border-top:6px solid #4fb867}
+.pxf-char{position:absolute;bottom:34px;left:50%;transform:translateX(-50vw);transition:transform 2.2s steps(22)}
+.pxf.on .pxf-char{transform:translateX(-50%)}
+.pxf-bubble{position:absolute;bottom:110px;left:50%;transform:translateX(-50%) scale(0);transform-origin:bottom center;font-family:'Press Start 2P',monospace;font-size:8px;white-space:nowrap;background:var(--cream);color:var(--navy);padding:8px 10px;box-shadow:3px 3px 0 #000;transition:transform .2s steps(3) 2.3s}
+.pxf.on .pxf-bubble{transform:translateX(-50%) scale(1)}
+.pxf-copy{position:relative;margin:0;padding:16px 0 22px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--tx3);text-align:center;background:var(--fbg)}
+.pxf .art{display:inline-block;position:relative;vertical-align:middle;flex-shrink:0}
+.pxf .art>i{position:absolute;top:0;left:0;display:block}
+.pxf .art.anim>i.f1{animation:pxfF1 .5s steps(1) infinite}
+.pxf .art.anim>i.f2{opacity:0;animation:pxfF2 .5s steps(1) infinite}
+@keyframes pxfF1{0%{opacity:1}50%{opacity:0}}
+@keyframes pxfF2{0%{opacity:0}50%{opacity:1}}
+html[data-px-theme=light] .pxf{--tx:#171B33;--tx2:#3A3E5C;--tx3:#5C607E;--tgold:#8F5C00;--tcyan:#0A6E74;--pn:#FFFDF8;--ln:#C4BBE2;--fbg:#EAE3F5}
+html[data-px-theme=light] .pxf h2{text-shadow:5px 5px 0 #d7c8ff}
+html[data-px-theme=light] .pxf-card{box-shadow:6px 6px 0 #171B33}
+@media (prefers-reduced-motion:reduce){.pxf *{animation:none!important;transition:none!important}.pxf-char{transform:translateX(-50%)!important}.pxf-bubble{transform:translateX(-50%) scale(1)!important}}
